@@ -1,4 +1,4 @@
-create schema locadoda;
+create schema locadora;
 
 create table cliente(
 	id int(11) not null auto_increment,
