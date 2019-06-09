@@ -1,4 +1,4 @@
-package tests;
+package tests.filme;
 
 import dao.FilmeDao;
 import java.sql.SQLException;
