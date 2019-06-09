@@ -7,7 +7,6 @@ public abstract class Pessoa {
     private String cpf;
     private Endereco endereco;
     private String telefone;
-    private String email;
 
     
     public Integer getId() {
@@ -48,14 +47,6 @@ public abstract class Pessoa {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
 }
