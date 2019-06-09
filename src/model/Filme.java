@@ -1,16 +1,37 @@
 package model;
 
 public class Filme {
-    
+
     private Integer id;
     private String titulo;
     private String genero;
-    private String info;
-    private Boolean disposicao;
+    private String informacao;
+    private Integer disponivel;
     private Integer quantidade;
     private Double valor;
 
-    
+    public Filme() {
+    }
+
+    public Filme(String titulo, String genero, String informacao, Integer disponivel, Integer quantidade, Double valor) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.informacao = informacao;
+        this.disponivel = disponivel;
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
+
+    public Filme(Integer id, String titulo, String genero, String informacao, Integer disponivel, Integer quantidade, Double valor) {
+        this.id = id;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.informacao = informacao;
+        this.disponivel = disponivel;
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -35,20 +56,20 @@ public class Filme {
         this.genero = genero;
     }
 
-    public String getInfo() {
-        return info;
+    public String getInformacao() {
+        return informacao;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setInformacao(String informacao) {
+        this.informacao = informacao;
     }
 
-    public Boolean getDisposicao() {
-        return disposicao;
+    public Integer getDisponivel() {
+        return disponivel;
     }
 
-    public void setDisposicao(Boolean disposicao) {
-        this.disposicao = disposicao;
+    public void setDisponivel(Integer disponivel) {
+        this.disponivel = disponivel;
     }
 
     public Integer getQuantidade() {
@@ -66,5 +87,5 @@ public class Filme {
     public void setValor(Double valor) {
         this.valor = valor;
     }
-    
+
 }
