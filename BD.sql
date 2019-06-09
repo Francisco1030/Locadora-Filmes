@@ -34,7 +34,7 @@ create table filme(
     titulo varchar(100) not null,
     genero varchar(100) not null,
     informacao varchar(255) not null,
-    disponivel int(1) not null,
+    disponivel varchar(20) not null,
     quantidade int(11) not null,
 	valor double(9,2) not null,
     primary key(id)

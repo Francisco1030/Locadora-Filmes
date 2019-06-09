@@ -6,30 +6,47 @@ public class Filme {
     private String titulo;
     private String genero;
     private String informacao;
-    private Integer disponivel;
+    private String disponivel;
     private Integer quantidade;
     private Double valor;
 
     public Filme() {
     }
 
-    public Filme(String titulo, String genero, String informacao, Integer disponivel, Integer quantidade, Double valor) {
+    public Filme(String titulo, String genero, String informacao, Integer quantidade, Double valor) {
         this.titulo = titulo;
         this.genero = genero;
         this.informacao = informacao;
-        this.disponivel = disponivel;
         this.quantidade = quantidade;
         this.valor = valor;
+        filmeDisponivel();
     }
 
-    public Filme(Integer id, String titulo, String genero, String informacao, Integer disponivel, Integer quantidade, Double valor) {
+    public Filme(Integer id, String titulo, String genero, String informacao, Integer quantidade, Double valor) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.informacao = informacao;
-        this.disponivel = disponivel;
         this.quantidade = quantidade;
         this.valor = valor;
+        filmeDisponivel();
+    }
+
+    @Override
+    public String toString() {
+        return " ID: " + id + "\n TITULO: " + titulo + "\n GENERO: " + genero + "\n INFORMAÇÃO: " + informacao
+                + "\n DISPONIVEL: " + disponivel + "\n QUANTIDADE: " + quantidade + "\n VALOR: " + valor
+                + "\n -------------------------------\n";
+    }
+
+    public void filmeDisponivel() {
+        if (this.quantidade > 0) {
+            this.disponivel = "Filme disponivel";
+
+        } else if (quantidade <= 0) {
+            this.disponivel = "Filme indisponivel";
+
+        }
     }
 
     public Integer getId() {
@@ -64,11 +81,11 @@ public class Filme {
         this.informacao = informacao;
     }
 
-    public Integer getDisponivel() {
+    public String getDisponivel() {
         return disponivel;
     }
 
-    public void setDisponivel(Integer disponivel) {
+    public void setDisponivel(String disponivel) {
         this.disponivel = disponivel;
     }
 

@@ -1,6 +1,7 @@
 package utils;
 
 import javax.swing.JOptionPane;
+import model.Filme;
 
 public class Mensagens {
 
@@ -29,5 +30,9 @@ public class Mensagens {
             return 0;
         }
         return 1;
+    }
+
+    public static void mensagemConfirmacao(Filme filmes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
