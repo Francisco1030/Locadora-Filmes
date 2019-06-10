@@ -9,7 +9,14 @@ public class Endereco {
     private String estado;
     private String cep;
 
+    @Override
+    public String toString() {
+        return " RUA: " + rua + "\n Nº: " + numero + "\n COMPLEMENTO: " + complemento + "\n CIDADE: " + cidade
+                + "\n ESTADO: " + estado + "\n CEP: " + cep; 
+    }
 
+    
+    
     public String getRua() {
         return rua;
     }

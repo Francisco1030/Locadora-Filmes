@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import model.Cliente;
 import utils.JDBCUtils;
@@ -21,7 +20,7 @@ public class ClienteDao {
     public void inserir(Cliente cliente) throws SQLException {
 
         con = jdbc.getConnection();
-        String sql = "INSERT INTO cliente (nome, cpf, rua, numero, complemento, cidade, estado, cep, data_nascimento) VALUES (?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO cliente (nome, cpf, rua, numero, complemento, cidade, estado, cep, telefone) VALUES (?,?,?,?,?,?,?,?,?)";
         stm = con.prepareStatement(sql);
         stm.setString(1, cliente.getNome());
         stm.setString(2, cliente.getCpf());
@@ -31,7 +30,7 @@ public class ClienteDao {
         stm.setString(6, cliente.getEndereco().getCidade());
         stm.setString(7, cliente.getEndereco().getEstado());
         stm.setString(8, cliente.getEndereco().getCep());
-        stm.setDate(9, (java.sql.Date) cliente.getDataNascimento());
+        stm.setString(9, cliente.getTelefone());
         stm.execute();
         con.close();
 

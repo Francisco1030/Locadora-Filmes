@@ -1,5 +1,5 @@
 create schema locadora;
-
+use locadora;
 create table cliente(
 	id int(11) not null auto_increment,
     nome varchar(255) not null,
@@ -10,7 +10,7 @@ create table cliente(
     cidade varchar(50) not null,
     estado varchar(2) not null,
     cep varchar(9) not null,
-    data_nascimento date not null,
+    telefone varchar(15) not null,
     primary key(id)
 );
 
@@ -24,6 +24,7 @@ create table funcionario(
     cidade varchar(50) not null,
     estado varchar(2) not null,
     cep varchar(9) not null,
+    telefone varchar(15) not null,
     login varchar(100) not null,
     senha varchar(100) not null,
     primary key(id)
@@ -50,6 +51,7 @@ create table locacao(
     foreign key (id_cliente) references cliente(id),
     foreign key (id_filme) references filme(id)
 );
+
 
 create table debito_cliente(
 	id int(11) not null auto_increment,

@@ -8,7 +8,40 @@ public abstract class Pessoa {
     private Endereco endereco;
     private String telefone;
 
-    
+    public Pessoa() {
+
+    }
+//
+//    public Pessoa(Integer id, String nome, String cpf, String rua, String numero, String complemento, String cidade, String estado, String cep, String telefone) {
+//        this.id = id;
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.endereco.setRua(rua);
+//        this.endereco.setNumero(numero);
+//        this.endereco.setComplemento(complemento);
+//        this.endereco.setCidade(cidade);
+//        this.endereco.setEstado(estado);
+//        this.endereco.setCep(cep);
+//        this.telefone = telefone;
+//    }
+//
+//    public Pessoa(String nome, String cpf, String rua, String numero, String complemento, String cidade, String estado, String cep, String telefone) {
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.endereco.setRua(rua);
+//        this.endereco.setNumero(numero);
+//        this.endereco.setComplemento(complemento);
+//        this.endereco.setCidade(cidade);
+//        this.endereco.setEstado(estado);
+//        this.endereco.setCep(cep);
+//        this.telefone = telefone;
+//    }
+
+    @Override
+    public String toString() {
+        return " ID: " + id + "\n NOME: " + nome + "\n CPF: " + cpf + "\n " + endereco + "\n TELEFONE: " + telefone;
+    }
+
     public Integer getId() {
         return id;
     }
