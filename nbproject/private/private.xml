@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/francisco/Documentos/java/LocadoraFilmes/src/tests/cliente/TesteInserirCliente.java</file>
-            <file>file:/home/francisco/Documentos/java/LocadoraFilmes/src/dao/ClienteDao.java</file>
-            <file>file:/home/francisco/Documentos/java/LocadoraFilmes/src/model/Cliente.java</file>
+            <file>file:/home/francisco/Documentos/java/LocadoraFilmes/src/dao/LocacaoDao.java</file>
+            <file>file:/home/francisco/Documentos/java/LocadoraFilmes/src/tests/locacao/TesteInserirLocacao.java</file>
+            <file>file:/home/francisco/Documentos/java/LocadoraFilmes/src/model/Locacao.java</file>
         </group>
     </open-files>
 </project-private>

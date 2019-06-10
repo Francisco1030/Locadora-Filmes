@@ -1,16 +1,21 @@
 package model;
 
 import java.util.Date;
-import java.util.List;
 
 public class Locacao {
 
     private Integer id;
     private Cliente cliente;
     private Filme filme;
-    private List<Filme> filmes;
     private Date dataLocacao;
     private Date dataDevolucao;
+    private String status;
+
+    @Override
+    public String toString() {
+        return "Id: " + id + "\n Cliente: " + cliente + "\n Filme: " + filme
+                + "\n Data de Locação: " + dataLocacao + "\n Data de Devolução: " + dataDevolucao;
+    }
 
     public Integer getId() {
         return id;
@@ -26,14 +31,6 @@ public class Locacao {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-    
-    public List<Filme> getFilmes() {
-        return filmes;
-    }
-
-    public void setFilmes(List<Filme> filmes) {
-        this.filmes = filmes;
     }
 
     public Date getDataLocacao() {
@@ -59,5 +56,13 @@ public class Locacao {
     public void setFilme(Filme filme) {
         this.filme = filme;
     }
-      
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }
