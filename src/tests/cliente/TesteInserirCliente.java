@@ -4,6 +4,7 @@ import dao.ClienteDao;
 import java.sql.SQLException;
 import model.Cliente;
 import model.Endereco;
+import model.Pessoa;
 import utils.Mensagens;
 
 public class TesteInserirCliente {

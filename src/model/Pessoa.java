@@ -5,7 +5,7 @@ public abstract class Pessoa {
     private Integer id;
     private String nome;
     private String cpf;
-    private Endereco endereco;
+    private Endereco endereco = new Endereco();
     private String telefone;
 
     public Pessoa() {
