@@ -10,7 +10,8 @@ public class TesteListarFilmes {
     
     public static void main(String[] args) {
         FilmeDao dao = new FilmeDao();
-        
+        Filme filme = new Filme();
+        filme.filmeDisponivel();
         try {
             List<Filme> lista = dao.listar();
             

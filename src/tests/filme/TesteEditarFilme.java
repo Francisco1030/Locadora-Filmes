@@ -2,21 +2,26 @@ package tests.filme;
 
 import dao.FilmeDao;
 import java.sql.SQLException;
+import java.util.List;
 import model.Filme;
 import utils.Mensagens;
 
 public class TesteEditarFilme {
 
     public static void main(String[] args) {
-        Filme filme = new Filme(4, "Deus não estar morto 2", "Religioso", "Melhor filme religioso de 2017",  0, 28.5);
         FilmeDao dao = new FilmeDao();
 
         try {
-            dao.editar(filme);
-            Mensagens.mensagemAviso("Editado com sucesso!");
+            List<Filme> lista = dao.listar();
+            Filme c4 = lista.get(0);
+            c4.setQuantidade(18);
+            c4.filmeDisponivel();
+            dao.editar(c4);
+            Mensagens.mensagemConfirmacao("Atualizado");
         } catch (SQLException e) {
             Mensagens.mensagemErro(e.getMessage());
         }
+
     }
 
 }
