@@ -61,4 +61,35 @@ public class ClienteDao {
         con.close();
         return clientes;
     }
+
+    public void editar(Cliente cliente) throws SQLException {
+
+        con = jdbc.getConnection();
+        String sql = "UPDATE cliente SET nome = ?, cpf = ?, rua = ?, numero = ?, complemento = ?, cidade = ?, estado = ?, cep = ?, telefone = ?  WHERE id = ?";
+        stm = con.prepareStatement(sql);
+        stm.setString(1, cliente.getNome());
+        stm.setString(2, cliente.getCpf());
+        stm.setString(3, cliente.getEndereco().getRua());
+        stm.setString(4, cliente.getEndereco().getNumero());
+        stm.setString(5, cliente.getEndereco().getComplemento());
+        stm.setString(6, cliente.getEndereco().getCidade());
+        stm.setString(7, cliente.getEndereco().getEstado());
+        stm.setString(8, cliente.getEndereco().getCep());
+        stm.setString(9, cliente.getTelefone());
+        stm.setInt(10, cliente.getId());
+        stm.execute();
+        con.close();
+
+    }
+
+    public void excluir(Cliente cliente) throws SQLException {
+
+        con = jdbc.getConnection();
+        String sql = "DELETE FROM cliente WHERE id = ?";
+        stm = con.prepareStatement(sql);
+        stm.setInt(1, cliente.getId());
+        stm.execute();
+        con.close();
+
+    }
 }
