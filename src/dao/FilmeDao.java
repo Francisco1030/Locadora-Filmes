@@ -34,6 +34,7 @@ public class FilmeDao {
     }
 
     public List<Filme> listar() throws SQLException {
+        
         con = jdbc.getConnection();
         String sql = "SELECT * FROM filme";
         stm = con.prepareStatement(sql);

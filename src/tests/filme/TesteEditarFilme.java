@@ -13,10 +13,10 @@ public class TesteEditarFilme {
 
         try {
             List<Filme> lista = dao.listar();
-            Filme c4 = lista.get(0);
-            c4.setQuantidade(18);
-            c4.filmeDisponivel();
-            dao.editar(c4);
+            Filme f = lista.get(0);
+            f.setQuantidade(0);
+            f.filmeDisponivel();
+            dao.editar(f);
             Mensagens.mensagemConfirmacao("Atualizado");
         } catch (SQLException e) {
             Mensagens.mensagemErro(e.getMessage());

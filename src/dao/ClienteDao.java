@@ -20,17 +20,14 @@ public class ClienteDao {
     public void inserir(Cliente cliente) throws SQLException {
 
         con = jdbc.getConnection();
-        String sql = "INSERT INTO cliente (nome, cpf, rua, numero, complemento, cidade, estado, cep, telefone) VALUES (?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO cliente (nome, cpf, rua, numero, cidade, telefone) VALUES (?,?,?,?,?,?)";
         stm = con.prepareStatement(sql);
         stm.setString(1, cliente.getNome());
         stm.setString(2, cliente.getCpf());
         stm.setString(3, cliente.getEndereco().getRua());
         stm.setString(4, cliente.getEndereco().getNumero());
-        stm.setString(5, cliente.getEndereco().getComplemento());
-        stm.setString(6, cliente.getEndereco().getCidade());
-        stm.setString(7, cliente.getEndereco().getEstado());
-        stm.setString(8, cliente.getEndereco().getCep());
-        stm.setString(9, cliente.getTelefone());
+        stm.setString(5, cliente.getEndereco().getCidade());
+        stm.setString(6, cliente.getTelefone());
         stm.execute();
         con.close();
 
@@ -50,10 +47,7 @@ public class ClienteDao {
             cliente.setCpf(rs.getString("cpf"));
             cliente.getEndereco().setRua(rs.getString("rua"));
             cliente.getEndereco().setNumero(rs.getString("numero"));
-            cliente.getEndereco().setComplemento(rs.getString("complemento"));
             cliente.getEndereco().setCidade(rs.getString("cidade"));
-            cliente.getEndereco().setEstado(rs.getString("estado"));
-            cliente.getEndereco().setCep(rs.getString("cep"));
             cliente.setTelefone(rs.getString("telefone"));
             clientes.add(cliente);
 
@@ -65,18 +59,15 @@ public class ClienteDao {
     public void editar(Cliente cliente) throws SQLException {
 
         con = jdbc.getConnection();
-        String sql = "UPDATE cliente SET nome = ?, cpf = ?, rua = ?, numero = ?, complemento = ?, cidade = ?, estado = ?, cep = ?, telefone = ?  WHERE id = ?";
+        String sql = "UPDATE cliente SET nome = ?, cpf = ?, rua = ?, numero = ?, cidade = ?, telefone = ?  WHERE id = ?";
         stm = con.prepareStatement(sql);
         stm.setString(1, cliente.getNome());
         stm.setString(2, cliente.getCpf());
         stm.setString(3, cliente.getEndereco().getRua());
         stm.setString(4, cliente.getEndereco().getNumero());
-        stm.setString(5, cliente.getEndereco().getComplemento());
-        stm.setString(6, cliente.getEndereco().getCidade());
-        stm.setString(7, cliente.getEndereco().getEstado());
-        stm.setString(8, cliente.getEndereco().getCep());
-        stm.setString(9, cliente.getTelefone());
-        stm.setInt(10, cliente.getId());
+        stm.setString(5, cliente.getEndereco().getCidade());
+        stm.setString(6, cliente.getTelefone());
+        stm.setInt(7, cliente.getId());
         stm.execute();
         con.close();
 

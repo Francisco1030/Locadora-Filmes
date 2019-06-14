@@ -13,8 +13,8 @@ public class Locacao {
 
     @Override
     public String toString() {
-        return "Id: " + id + "\n Cliente: " + cliente + "\n Filme: " + filme
-                + "\n Data de Locação: " + dataLocacao + "\n Data de Devolução: " + dataDevolucao;
+        return "Id Locação: " + id + "\n Cliente: " + cliente + "\n Filme: " + filme.getTitulo() + "\n Informação: " + filme.getInformacao()
+                + "\n Data de Locação: " + dataLocacao + "\n Data de Devolução: " + dataDevolucao +"\n ";
     }
 
     public Integer getId() {

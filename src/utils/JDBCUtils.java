@@ -9,12 +9,11 @@ public class JDBCUtils {
     public Connection getConnection() {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/locadora", "root", "");
-//            System.out.println("Conectado");
+//            Mensagens.mensagemConfirmacao("Conectado");
             return con;
 
         } catch (SQLException e) {
-//            System.out.println("ERRO");
-//            System.out.println(e.getMessage());
+            Mensagens.mensagemErro(e.getMessage());
             return null;
         } finally {
 //      System.out.println("SEMPRE VAI EXECUTAR");

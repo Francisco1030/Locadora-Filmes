@@ -33,7 +33,7 @@ public class LocacaoDao {
         con.close();
 
     }
-
+    
     public List<Locacao> listar() throws SQLException {
         con = jdbc.getConnection();
         String sql = "SELECT * FROM locadora.locacao as l natural join locadora.cliente as c join locadora.filme as f";
@@ -53,10 +53,7 @@ public class LocacaoDao {
             cliente.setCpf(rs.getString("cpf"));
             cliente.getEndereco().setRua(rs.getString("rua"));
             cliente.getEndereco().setNumero(rs.getString("numero"));
-            cliente.getEndereco().setComplemento(rs.getString("complemento"));
             cliente.getEndereco().setCidade(rs.getString("cidade"));
-            cliente.getEndereco().setEstado(rs.getString("estado"));
-            cliente.getEndereco().setCep(rs.getString("cep"));
             cliente.setTelefone(rs.getString("telefone"));
 
             Filme filme = new Filme();

@@ -13,8 +13,8 @@ public class TesteExcluirFilme {
 
         try {
             List<Filme> lista = dao.listar();
-            Filme c4 = lista.get(1);
-            dao.excluir(c4);
+            Filme f = lista.get(1);
+            dao.excluir(f);
             Mensagens.mensagemConfirmacao("Deletado");
         } catch (SQLException e) {
             Mensagens.mensagemErro(e.getMessage());

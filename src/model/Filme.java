@@ -35,8 +35,7 @@ public class Filme {
     @Override
     public String toString() {
         return " ID: " + id + "\n TITULO: " + titulo + "\n GENERO: " + genero + "\n INFORMAÇÃO: " + informacao
-                + "\n DISPONIVEL: " + disponivel + "\n QUANTIDADE: " + quantidade + "\n VALOR: " + valor
-                + "\n -------------------------------\n";
+                + "\n DISPONIVEL: " + disponivel + "\n QUANTIDADE: " + quantidade + "\n VALOR: " + valor;
     }
 
     public void filmeDisponivel() {

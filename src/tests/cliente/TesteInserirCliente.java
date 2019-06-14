@@ -4,7 +4,6 @@ import dao.ClienteDao;
 import java.sql.SQLException;
 import model.Cliente;
 import model.Endereco;
-import model.Pessoa;
 import utils.Mensagens;
 
 public class TesteInserirCliente {
@@ -16,10 +15,7 @@ public class TesteInserirCliente {
             Endereco e = new Endereco();
             e.setRua("Av Baião");
             e.setNumero("20");
-            e.setComplemento("Casa");
             e.setCidade("Quixadá");
-            e.setEstado("CE");
-            e.setCep("63900-069");
 
             Cliente c = new Cliente();
             c.setNome("Francisco");

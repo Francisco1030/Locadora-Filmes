@@ -7,14 +7,18 @@ import utils.Mensagens;
 
 public class TesteInserirFilme {
 
-    public static void adicionar() {
+    public static void main(String[] args) {
+
         Filme filme = new Filme("Deus não estar morto", "Religioso", "Melhor filme religioso de 2015", 0, 25.5);
         FilmeDao dao = new FilmeDao();
+       
         try {
             dao.inserir(filme);
-            Mensagens.mensagemAviso("Inserido com sucesso!");
+            Mensagens.mensagemConfirmacao("Inserido com sucesso!");
         } catch (SQLException e) {
             Mensagens.mensagemErro(e.getMessage());
         }
+
     }
+
 }

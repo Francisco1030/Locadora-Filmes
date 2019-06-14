@@ -235,18 +235,7 @@ public class TesteInsertCliente extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Endereco e = new Endereco();
         // cliente.setCpf((String) ftfCpf.getValue());
-        e.setRua("Av Baião");
-        e.setNumero("20");
-        e.setComplemento("Casa");
-        e.setCidade("Quixadá");
-        e.setEstado("CE");
-        e.setCep("63900-069");
-
-        Cliente c = new Cliente();
-        c.setNome("Francisco");
-        c.setCpf("058.874.697-77");
-        c.setEndereco(e);
-        c.setTelefone("(88) 98140-6086");
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
